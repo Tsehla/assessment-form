@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>Tsehla Nkhi practical assigment 2.3</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+    <style>
+        body{border: 5px double #33ccff; 
+            width:auto;
+            height:auto;}
+    
+    
+    </style>
+    
+    </head>
+<body id="body">
+    <style>
+        #pop{display: none;}
+        input{ border-top: 0px black solid;
+        border-left:0px;
+        border-right:0px;}  
+        *{
+            background-color: #ffffff;
+            font-family: 'Raleway', sans-serif;
+        }
+        h1{text-decoration: underline;
+         font-family: 'IBM Plex Mono', monospace;}
+         h2{text-decoration: underline;
+        font-family: 'IBM Plex Mono', monospace;}
+        #submit{
+            border: 1px solid;
+        }
+        #pop{
+            width:20em;
+            height:10em;
+            position: absolute;
+            left:30%;
+            top:35%;
+            background-image: url(http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8A6CD00000578-0-image-m-72_1441379483392.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: transparent;
+        }
+    </style>
+<h1>Bra Mdeva's Spaza</h1>  
+    <p>Customer satisfaction survey </p>
+<h2>Please complete sentence below</h2>
+<p>My name is <input type="text" placeholder="Your name here">. I am <input type="number" placeholder="your age here"> years old. I am a <input list="gender" placeholder="Select your gender"name="gender"><datalist id="gender"><option value="Male">
+            <option value="Female">
+    </datalist>. My occupation is <input type="text" placeholder="type of work you do"> and my email address is <input type="text">.
+    <br/>
+<p> Please tell us how was our communication to you :
+    <input list="com" name="com" placeholder="Please select"><datalist id="com"><option value="Good"><option value="Great"><option value="Exellent"><option value="Poor"><option value="Bad"></datalist>
+    </p>
+                 
+  <p> Please tell us how long did it take to provide support to you :
+    <input list="com0" name="com0" placeholder="Please select"><datalist id="com0"><option value="Slow"><option value="Immidiate"><option value="Average"></datalist>
+    </p>
+                          
+  <p> Please tell us how helpful was the support provided to you :
+    <input list="com1" name="com1" placeholder="Please select"><datalist id="com1"><option value="Not helful"><option value="Slightly helpful"><option value="Solved the problem"></datalist>
+    </p>
+  <p> Please tell us how how likely are you to recomment us to you friends :
+    <input list="com2" name="com2" placeholder="Please select"><datalist id="com2"><option value="Not likely"><option value="likely"><option value="Definitely"></datalist>
+    </p>
+ <p> Please tell us how how do you prefer we contact you :
+    <input list="com3" name="com3" placeholder="Please select"><datalist id="com3"><option value="Sms"><option value="Email"><option value="Call"></datalist>
+    </p>                                
+<input type="submit" id="submit">
+    
+    <div id="pop"><div id="pop_contents"></div></div>
+    
+ <script>
+            function slides(){
+           
+            var a1= document.getElementById("pop").style.backgroundImage="url('http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8A6CD00000578-0-image-m-72_1441379483392.jpg')";
+               
+            var a2= document.getElementById("pop").style.backgroundImage="url('http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8AFA700000578-0-image-m-73_1441379494145.jpg')";
+               
+            var a3=document.getElementById("pop").style.backgroundImage="url('http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8B19F00000578-0-image-m-74_1441379505371.jpg')";
+               
+            var a4=document.getElementById("pop").style.backgroundImage="url('http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8A95F00000578-0-image-m-76_1441379526376.jpg')";
+                   
+            var a5=document.getElementById("pop").style.backgroundImage="url('http://i.dailymail.co.uk/i/pix/2015/09/04/16/2BF8B2EE00000578-0-image-m-79_1441379558437.jpg')";
+          var x=Math.floor(Math.random()*4)+1;     
+        var arr=["a0", "a1", "a2", "a3", "a4", "a5"];
+                return arr[x];
+        }
+      
+
+    document.getElementById("submit").onclick=function(){
+      alert("sending data, please while you wait enjoy this nature + architecture slide show");
+    document.getElementById("pop").style.display="block"; 
+        slides();
+        
+    }
+
+    
+    
+    
+    </script>           
+                 
+                
+    
+    
+    
+
+    
+    
+    </body>
+
+</html>
